@@ -1,0 +1,44 @@
+# Static scraping
+requests>=2.31.0
+urllib3>=2.0.0
+
+# HTML parsing
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+html5lib>=1.1
+
+# Dynamic DOM rendering
+selenium>=4.15.0
+webdriver-manager>=4.0.0
+
+# XPath execution
+cssselect>=1.2.0
+
+# API interaction
+httpx>=0.25.0
+aiohttp>=3.9.0
+
+# Data handling
+pandas>=2.1.0
+numpy>=1.25.0
+
+# CLI support
+click>=8.1.0
+rich>=13.6.0
+typer>=0.9.0
+
+# Configuration
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+configparser>=6.0.0
+
+# Logging and monitoring
+loguru>=0.7.0
+
+# Utilities
+fake-useragent>=1.4.0
+retrying>=1.3.4
+tqdm>=4.66.0
+
+# Testing
+pytest>=7.4.0
