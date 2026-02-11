@@ -1,0 +1,156 @@
+================================================================================
+                    AutoScraper AI - Installation Instructions
+================================================================================
+
+OPTION 1: AUTOMATIC INSTALLATION (RECOMMENDED)
+--------------------------------------------------------------------------------
+
+Windows Users:
+1. Double-click "QUICK_START.bat"
+2. Wait for installation to complete (5-15 minutes)
+3. Done!
+
+Mac/Linux Users:
+1. Open Terminal
+2. Navigate to project folder: cd majorp
+3. Make script executable: chmod +x QUICK_START.sh
+4. Run script: ./QUICK_START.sh
+5. Wait for installation to complete (5-15 minutes)
+6. Done!
+
+================================================================================
+
+OPTION 2: MANUAL INSTALLATION
+--------------------------------------------------------------------------------
+
+Step 1: Install Python 3.8+
+   - Download from: https://www.python.org/downloads/
+   - During installation, check "Add Python to PATH"
+
+Step 2: Clone Repository
+   Open Command Prompt/Terminal and run:
+   
+   git clone https://github.com/arqumb/majorp.git
+   cd majorp
+
+Step 3: Create Virtual Environment
+   
+   Windows:
+   python -m venv venv
+   venv\Scripts\activate
+   
+   Mac/Linux:
+   python3 -m venv venv
+   source venv/bin/activate
+
+Step 4: Install Dependencies
+   
+   pip install -r requirements.txt
+
+Step 5: Install Playwright Browsers
+   
+   python -m playwright install
+
+================================================================================
+
+TESTING THE INSTALLATION
+--------------------------------------------------------------------------------
+
+Run this command to test:
+
+python main.py "https://quotes.toscrape.com" "extract quotes" --output test.json
+
+Expected Result:
+- Scraping messages appear
+- File "test.json" is created
+- File contains extracted quotes
+
+================================================================================
+
+USAGE EXAMPLES
+--------------------------------------------------------------------------------
+
+Basic Usage:
+python main.py "URL" "TASK_DESCRIPTION"
+
+Save to File:
+python main.py "URL" "TASK" --output results.json
+
+Force New Rule:
+python main.py "URL" "TASK" --force-new
+
+Real Examples:
+
+1. Extract Quotes:
+   python main.py "https://quotes.toscrape.com" "extract quotes and authors" --output quotes.json
+
+2. Extract Products:
+   python main.py "https://shop.com/products" "extract product names and prices" --output products.json
+
+3. Extract News:
+   python main.py "https://news-site.com" "extract article titles" --output news.json
+
+================================================================================
+
+TROUBLESHOOTING
+--------------------------------------------------------------------------------
+
+Problem: "python: command not found"
+Solution: Try "python3" instead of "python"
+
+Problem: "pip: command not found"
+Solution: python -m pip install --upgrade pip
+
+Problem: "playwright install failed"
+Solution: Run as Administrator (Windows) or use sudo (Mac/Linux)
+
+Problem: Installation is slow
+Solution: This is normal! First installation downloads ~300MB of browsers
+
+Problem: "ModuleNotFoundError"
+Solution: Make sure virtual environment is activated, then:
+         pip install -r requirements.txt
+
+================================================================================
+
+DAILY USAGE
+--------------------------------------------------------------------------------
+
+Every time you want to use the scraper:
+
+1. Open Command Prompt/Terminal
+2. Navigate to project: cd majorp
+3. Activate virtual environment:
+   
+   Windows: venv\Scripts\activate
+   Mac/Linux: source venv/bin/activate
+
+4. Run your scraping command:
+   python main.py "URL" "TASK" --output results.json
+
+5. Check results in the output file!
+
+================================================================================
+
+GETTING HELP
+--------------------------------------------------------------------------------
+
+1. Read SETUP.md for detailed instructions
+2. Check GitHub Issues: https://github.com/arqumb/majorp/issues
+3. Create new issue with error details
+
+================================================================================
+
+SYSTEM REQUIREMENTS
+--------------------------------------------------------------------------------
+
+- Python 3.8 or higher
+- 2GB free disk space (for Playwright browsers)
+- Internet connection (for installation and scraping)
+- Windows 10+, macOS 10.13+, or Linux
+
+================================================================================
+
+                            Happy Scraping! 🚀
+
+================================================================================
